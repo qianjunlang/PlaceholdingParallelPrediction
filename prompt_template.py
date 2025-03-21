@@ -59,9 +59,6 @@ prompt_templates = {
             f"Q: Given an Amazon review: {text} \nIs the sentiment of this review positive or negative?\nA:",
             f"Q: Please analyze the following review found on Amazon: {text} \nBased on the content and tone of the comment, do you think the reviewer's attitude towards the product is positive or negative?\nA:",
 
-            # f"Q: Given an Amazon review: {title} {text} \nIs the sentiment of this review positive or negative?\nA:",
-            # f"Q: Please analyze the following review found on Amazon: {title} {text} \nBased on the content and tone of the comment, do you think the reviewer perceives the product as good or bad?\nA:",
-            # f"Q: Interpret the sentiment in the following customer feedback from Amazon: {title} {text} \nIs the customer's attitude towards the item positive or negative?\nA:",
         ],
         "ICL_prompt" : [
             f'Text: {title} {text}\nSentiment:',
@@ -117,14 +114,11 @@ prompt_templates = {
         ],
         "question_prompt" : [
             
-            # f"Q: film review: {text} \nIs the sentiment positive or negative?\nA:",
             f"Q: Here is a film review:{text} \nHelp me to detemine whether it is positive or negative?\nA:",
-            # f"Q: Explore this film review for {text} \nCan you discern if the sentiment is positive or negative?\nA:",
 
             f"Q: Given an IMDb review: {text} \nIs the sentiment of this review positive or negative?\nA:",
             f"Q: Please analyze the following review found on IMDb: {text} \nBased on the content and tone of the comment, do you think the reviewer's attitude towards the movie positive or negative?\nA:", #!new
-            # f"Q: Please analyze the following review found on IMDb: {text} \nBased on the content and tone of the comment, do you think the reviewer perceive the film as good or bad?\nA:",
-            # f"Q: Interpret the sentiment in the following viewer feedback from IMDb: {text} \nIs the viewer's attitude towards the movie positive or negative?\nA:",
+            
         ],
         "ICL_prompt" : [
             f'Text: {text}\nSentiment:',
@@ -179,14 +173,11 @@ prompt_templates = {
             f'{text}\nAfter thoroughly considering the review, my sentiment perspective is ',
         ],
         "question_prompt" : [
-            # f"Q: film review: {text} \nIs the sentiment positive or negative?\nA:",
             f"Q: Here is a film review:{text} \nHelp me to detemine whether it is positive or negative?\nA:",
-            # f"Q: Explore this film review for {text} \nCan you discern if the sentiment is positive or negative?\nA:",
 
             f"Q: Given an film review: {text} \nIs the sentiment of this review positive or negative?\nA:",
             f"Q: Please analyze the following film review: {text} \nBased on the content and tone of the comment, do you think the reviewer's attitude towards the movie positive or negative?\nA:", #!new
-            # f"Q: Please analyze the following film review: {text} \nBased on the content and tone of the comment, do you think the reviewer perceives the movie as good or bad?\nA:",
-            # f"Q: Interpret the following film review: {text} \nIs the reviewer's attitude towards the film positive or negative?\nA:",
+            
         ],
         "ICL_prompt" : [
             f'Text: {text}\nSentiment:',
@@ -234,15 +225,10 @@ prompt_templates = {
         ],
         "question_prompt" : [
             f"Q: Given an AG News article: {title}\n{text} \nWhich of the four standard categories (Business, Science/Technology, Sports, World/Politics) does this article best fit into?\nA:",
-            # f"Q: Please analyze the following news report from AG News: {title}\n{text} \nConsidering its subject matter and style, in which section of a newspaper (Business, Science/Technology, Sports, World/Politics) would this article be most appropriately placed?\nA:",
-            #f"Q: Determine the category of the following news piece from AG News: {title}\n{text} \nWhich topic does it primarily belong to among Business, Science/Technology, Sports, and World/Politics?\nA:",
-
-            # f"Q: Evaluate the content: {title}\n{text} \nWhich major category (Business, Science/Tech, Sports, World/Politics) best describes this piece?\nA:",
             f"Q: Review this news: {title}\n{text} \nIn which section (Business, Science/Tech, Sports, World/Politics) would you expect to find this article?\nA:",
-            # f"Q: Classify the news piece: {title}\n{text} \nWhich primary category (Business, Science/Tech, Sports, World/Politics) does this article fall under?\nA:",
-            f"Q: Please analyze the article {title}\n{text} \nHelp me to determine its main category (Business, Science/Tech, Sports, World/Politics).\nA:", #! new
-            # f"Q: Please examine the article {title}\n{text} \nHelp me to determine its main category (Business, Science/Tech, Sports, World/Politics).\nA:",
-            # f"Q: Please analyze the report {title}\n{text} \nWhich newspaper section (Business, Science/Tech, Sports, World/Politics) seems most suitable for this article?\nA:",
+            
+            f"Q: Please analyze the article {title}\n{text} \nHelp me to determine its main category (Business, Science/Tech, Sports, World/Politics).\nA:", 
+            
         ],
         "ICL_prompt" : [
             f'Text: {title} {text}\nCategory:',
@@ -304,15 +290,8 @@ prompt_templates = {
         "question_prompt" : [
             f"Q: Please examine the details below:\n{title}\n{text}\nIdentify the most suitable category or section for this entity from the following options: 'Album', 'Plant', 'WrittenWork', 'Film', 'EducationalInstitution', 'Building', 'MeanOfTransportation', 'Athlete', 'OfficeHolder', 'Company', 'NaturalPlace', 'Artist', 'Village', 'Animal'.\nA:",
             f"Q: Given the title and description: {title}\n{text} \nWhat category best fits the described entity? Choose from 'Album', 'Plant', 'WrittenWork', 'Film', 'EducationalInstitution', 'Building', 'MeanOfTransportation', 'Athlete', 'OfficeHolder', 'Company', 'NaturalPlace', 'Artist', 'Village', 'Animal'.\nA:",
-            #f"Q: Please analyze the following entry: {title}\n{text} \nIn which category or section of a pedia would this entity most likely appear?\nA:",
             f"Q: Based on the title: {title} and the following description: {text}, how would you define or categorize {title}? Select the best option from 'Album', 'Plant', 'WrittenWork', 'Film', 'EducationalInstitution', 'Building', 'MeanOfTransportation', 'Athlete', 'OfficeHolder', 'Company', 'NaturalPlace', 'Artist', 'Village', 'Animal'.\nA:",
-            #f"Q: Given a DBpedia description: {title}\n{text} \nWhat category best fits the described entity?\nA:",
-            #f"Q: Please analyze the following entry from DBpedia : {title}\n{text} \nIn which category or section of DBpedia would this entity most likely appear?\nA:",
-
-            # f"Q: Please evaluate the entry: {title}\n{text} \nWhere would this entity most likely fit into?\nA:",
-            # f"Q: Here is a entity: {title}\n{text} \nCan you help me to determine its most suitable category?\nA:",
-            # f"Q: Please evaluate the entry: {title}\n{text} \nWhere would this entity most likely fit into?\nA:",
-            # f"Q: Assess the entry for {title}\n{text} \nWhere do you think this entity aligns?\nA:",
+            
         ],
         "ICL_prompt" : [
             f'Text: {title} {text}\nCategory:',
@@ -362,12 +341,6 @@ prompt_templates = {
             f"Q: Given a Yahoo Answers thread: {title}\n{text} \nWhat category would you classify this question under? Choose from: 'Politics & Government', 'Society & Culture', 'Entertainment & Music', 'Science & Mathematics', 'Health', 'Education & Reference', 'Computers & Internet', 'Family & Relationships', 'Sports', 'Business & Finance'.\nA:",
             f"Q: Please analyze the following question and its response from Yahoo Answers: {title}\n{text} \nBased on its content and context, into which category or subject of Yahoo Answers would you place this question and answer? Select from: 'Politics & Government', 'Society & Culture', 'Entertainment & Music', 'Science & Mathematics', 'Health', 'Education & Reference', 'Computers & Internet', 'Family & Relationships', 'Sports', 'Business & Finance'.\nA:",
             f"Q: Determine the category of the following inquiry on Yahoo Answers: {title}\n{text} \nWhat is the primary topic or subject area of this query? Pick one from: 'Politics & Government', 'Society & Culture', 'Entertainment & Music', 'Science & Mathematics', 'Health', 'Education & Reference', 'Computers & Internet', 'Family & Relationships', 'Sports', 'Business & Finance'.\nA:",
-
-            # f"Q: Considering the thread: {title}\n{text} \nCan you help me to determine its most suitable category?\nA:",
-            # f"Q: Please evaluate the inquiry: {title}\n{text} \nUnder what category would you classify this question?\nA:",
-            # f"Q: Here is a discussion: {title}\n{text} \nWhere do you think it aligns?\nA:",
-            # f"Q: Given the thread content: {title}\n{text} \nWhat category best suits this online discussion?\nA:",
-            # f"Q: Please investigate the given inquiry: {title}\n{text} \nWhat stands out as the main theme or subject of this question?\nA:",
         ],
         "ICL_prompt" : [
             f'Text: {title} {text}\nCategory:',
@@ -440,12 +413,7 @@ prompt_templates = {
             f"Q: Given the following personal reflection: {text} \nWhich emotion does this reflection most strongly convey: sadness, joy, love, anger, fear or surprise?\nA:",
             f"Q: Please analyze the emotional tone of this statement: {text} \nBased on the language and sentiment, what primary emotion is being expressed: sadness, joy, love, anger, fear or surprise?\nA:",
             f"Q: Interpret the emotional expression in the given narrative: {text} \nConsidering the language and tone, what is the dominant emotion? Choose from: sadness, joy, love, anger, fear, surprise.\nA:",
-            # f"Q: In reviewing the expressed thoughts here: {text} \nCan you identify the predominant emotion? Is it sadness, joy, love, anger, fear or surprise?\nA:",
-            
-            # f"Q: Considering this personal reflection: {text} \nWhich emotion is most vividly depicted: joy, disgust, anger, sadness, guilt, fear, or shame?\nA:",
-            # f"Q: Upon reviewing the articulated thoughts: {text} \nCan you pinpoint the prevailing emotion? Is it joy, disgust, anger, sadness, guilt, fear, or shame?\nA:",
-            # f"Q: Here is the emotional expression: {text} \nWhich primary emotion appears to be expressed: joy, disgust, anger, sadness, guilt, fear, or shame?\nA:",
-            # f"Q: Upon reviewing the sentiments expressed here: {text} \nWhich emotion is most prominent: joy, disgust, anger, sadness, guilt, fear, or shame?\nA:",
+           
         ],
         "ICL_prompt" : [
             f'Text: {text}\nEmotion:',
@@ -518,12 +486,7 @@ prompt_templates = {
             f"Q: Given the following personal reflection: {text} \nWhich emotion does this reflection most strongly convey: sadness, joy, love, anger, fear or surprise?\nA:",
             f"Q: Please analyze the emotional tone of this statement: {text} \nBased on the language and sentiment, what primary emotion is being expressed: sadness, joy, love, anger, fear or surprise?\nA:",
             f"Q: Interpret the emotional expression in the given narrative: {text} \nConsidering the language and tone, what is the dominant emotion? Choose from: sadness, joy, love, anger, fear, surprise.\nA:",
-            # f"Q: In reviewing the expressed thoughts here: {text} \nCan you identify the predominant emotion? Is it sadness, joy, love, anger, fear or surprise?\nA:",
-            
-            # f"Q: Considering this personal reflection: {text} \nWhich emotion is most vividly depicted: joy, disgust, anger, sadness, guilt, fear, or shame?\nA:",
-            # f"Q: Upon reviewing the articulated thoughts: {text} \nCan you pinpoint the prevailing emotion? Is it joy, disgust, anger, sadness, guilt, fear, or shame?\nA:",
-            # f"Q: Here is the emotional expression: {text} \nWhich primary emotion appears to be expressed: joy, disgust, anger, sadness, guilt, fear, or shame?\nA:",
-            # f"Q: Upon reviewing the sentiments expressed here: {text} \nWhich emotion is most prominent: joy, disgust, anger, sadness, guilt, fear, or shame?\nA:",
+           
         ],
         "ICL_prompt" : [
             f'Text: {text}\nEmotion:',
