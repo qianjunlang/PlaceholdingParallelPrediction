@@ -257,7 +257,6 @@ prompt_templates = {
 
     "dbpedia": lambda title, text: {
         "dataset_prompt" : [
-            #f'{title}\n{text}\nThe category of {title} is ',
             f'{title}\n{text}\nThe label that best describes {title} is ',
             f'{title}\n{text}\nSo, {title} is ',
 
@@ -267,7 +266,6 @@ prompt_templates = {
             f'{title}\n{text}\n{title} is an example of ',
             
             f'{title}\n{text}\n{title} belongs to ',
-            #f'{title}\n{text}\nI think {title} is ',
             f'{title}\n{text}\nI would classify {title} as ',
             f'{title}\n{text}\nBased on the discription, its category is ',
             f'{title}\n{text}\nIn this context, {title} falls into the category of ',
